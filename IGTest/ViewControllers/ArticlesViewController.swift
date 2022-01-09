@@ -9,11 +9,11 @@ import UIKit
 
 class ArticlesViewController: UIViewController {
 
-    private unowned let coordinator: ArticlesCoordinatorProtocol
+    private let viewModel: ArticlesViewModel
 
-    init(coordinator: ArticlesCoordinatorProtocol) {
+    init(viewModel: ArticlesViewModel) {
 
-        self.coordinator = coordinator
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -23,25 +23,6 @@ class ArticlesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        addButton()
-    }
-
-    func addButton() {
-        let button = UIButton()
-        button.setTitle("ArticlesViewController", for: .normal)
-        button.addTarget(self, action: #selector(buttonSelected), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(button)
-
-        NSLayoutConstraint.activate([
-            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-        ])
-    }
-
-    @objc
-    func buttonSelected() {
-        coordinator.didSelectButton()
     }
 }
 

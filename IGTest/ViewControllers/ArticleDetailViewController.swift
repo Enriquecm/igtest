@@ -9,11 +9,11 @@ import UIKit
 
 class ArticleDetailViewController: UIViewController {
 
-    private unowned let coordinator: ArticleDetailCoordinatorProtocol
+    private let viewModel: ArticleDetailViewModel
 
-    init(coordinator: ArticleDetailCoordinatorProtocol) {
+    init(viewModel: ArticleDetailViewModel) {
 
-        self.coordinator = coordinator
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 

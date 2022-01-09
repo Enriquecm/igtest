@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Dashboard: Codable {
+    let topNews: [Report]?
+    let dailyBriefings: DailyBriefings?
+    let technicalAnalysis, specialReport: [Report]?
+}

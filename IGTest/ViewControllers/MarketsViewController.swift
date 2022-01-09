@@ -9,11 +9,11 @@ import UIKit
 
 class MarketsViewController: UIViewController {
 
-    private unowned let coordinator: MarketsCoordinatorProtocol
+    private let viewModel: MarketsViewModel
 
-    init(coordinator: MarketsCoordinatorProtocol) {
+    init(viewModel: MarketsViewModel) {
 
-        self.coordinator = coordinator
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 

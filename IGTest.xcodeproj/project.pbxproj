@@ -16,6 +16,13 @@
 		F3714B5E278A17B3008A0248 /* ArticlesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B5D278A17B3008A0248 /* ArticlesCoordinator.swift */; };
 		F3714B60278A1E0B008A0248 /* ArticleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B5F278A1E0B008A0248 /* ArticleDetailViewController.swift */; };
 		F3714B62278A1E29008A0248 /* ArticleDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B61278A1E29008A0248 /* ArticleDetailCoordinator.swift */; };
+		F3714B65278A636B008A0248 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B64278A636B008A0248 /* Author.swift */; };
+		F3714B67278A641F008A0248 /* Dashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B66278A641F008A0248 /* Dashboard.swift */; };
+		F3714B69278A65FC008A0248 /* DailyBriefings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B68278A65FC008A0248 /* DailyBriefings.swift */; };
+		F3714B6B278A660A008A0248 /* Report.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B6A278A660A008A0248 /* Report.swift */; };
+		F3714B6E278A6C75008A0248 /* ArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B6D278A6C75008A0248 /* ArticlesViewModel.swift */; };
+		F3714B70278A6DED008A0248 /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B6F278A6DED008A0248 /* ArticleDetailViewModel.swift */; };
+		F3714B72278A6E17008A0248 /* MarketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B71278A6E17008A0248 /* MarketsViewModel.swift */; };
 		F3F4266727852866002EC461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F4266627852866002EC461 /* AppDelegate.swift */; };
 		F3F4266927852866002EC461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F4266827852866002EC461 /* SceneDelegate.swift */; };
 		F3F4266B27852866002EC461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F4266A27852866002EC461 /* ViewController.swift */; };
@@ -56,6 +63,13 @@
 		F3714B5D278A17B3008A0248 /* ArticlesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesCoordinator.swift; sourceTree = "<group>"; };
 		F3714B5F278A1E0B008A0248 /* ArticleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewController.swift; sourceTree = "<group>"; };
 		F3714B61278A1E29008A0248 /* ArticleDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailCoordinator.swift; sourceTree = "<group>"; };
+		F3714B64278A636B008A0248 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		F3714B66278A641F008A0248 /* Dashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dashboard.swift; sourceTree = "<group>"; };
+		F3714B68278A65FC008A0248 /* DailyBriefings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyBriefings.swift; sourceTree = "<group>"; };
+		F3714B6A278A660A008A0248 /* Report.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Report.swift; sourceTree = "<group>"; };
+		F3714B6D278A6C75008A0248 /* ArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewModel.swift; sourceTree = "<group>"; };
+		F3714B6F278A6DED008A0248 /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
+		F3714B71278A6E17008A0248 /* MarketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsViewModel.swift; sourceTree = "<group>"; };
 		F3F4266327852866002EC461 /* IGTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F4266627852866002EC461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F4266827852866002EC461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +124,27 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		F3714B63278A62D1008A0248 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F3714B64278A636B008A0248 /* Author.swift */,
+				F3714B66278A641F008A0248 /* Dashboard.swift */,
+				F3714B68278A65FC008A0248 /* DailyBriefings.swift */,
+				F3714B6A278A660A008A0248 /* Report.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F3714B6C278A6C04008A0248 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F3714B6D278A6C75008A0248 /* ArticlesViewModel.swift */,
+				F3714B6F278A6DED008A0248 /* ArticleDetailViewModel.swift */,
+				F3714B71278A6E17008A0248 /* MarketsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		F3F4265A27852866002EC461 = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +169,9 @@
 			isa = PBXGroup;
 			children = (
 				F3F426962785294B002EC461 /* Coordinator */,
+				F3714B63278A62D1008A0248 /* Models */,
 				F3714B50278A05A7008A0248 /* ViewControllers */,
+				F3714B6C278A6C04008A0248 /* ViewModels */,
 				F3F4266627852866002EC461 /* AppDelegate.swift */,
 				F3F4266827852866002EC461 /* SceneDelegate.swift */,
 				F3F4266A27852866002EC461 /* ViewController.swift */,
@@ -307,20 +344,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3F4269827852955002EC461 /* Coordinator.swift in Sources */,
+				F3714B6E278A6C75008A0248 /* ArticlesViewModel.swift in Sources */,
 				F3F4266B27852866002EC461 /* ViewController.swift in Sources */,
 				F3F4269A27852A7F002EC461 /* AppCoordinator.swift in Sources */,
+				F3714B72278A6E17008A0248 /* MarketsViewModel.swift in Sources */,
+				F3714B69278A65FC008A0248 /* DailyBriefings.swift in Sources */,
 				F3F4266727852866002EC461 /* AppDelegate.swift in Sources */,
 				F3714B62278A1E29008A0248 /* ArticleDetailCoordinator.swift in Sources */,
 				F3714B52278A05C1008A0248 /* TabBarController.swift in Sources */,
 				F3F4269C27852B06002EC461 /* TabCoordinator.swift in Sources */,
 				F3714B5E278A17B3008A0248 /* ArticlesCoordinator.swift in Sources */,
+				F3714B6B278A660A008A0248 /* Report.swift in Sources */,
+				F3714B70278A6DED008A0248 /* ArticleDetailViewModel.swift in Sources */,
 				F3714B5A278A0AE3008A0248 /* MarketsViewController.swift in Sources */,
 				F3F4266927852866002EC461 /* SceneDelegate.swift in Sources */,
+				F3714B65278A636B008A0248 /* Author.swift in Sources */,
 				F3714B56278A091A008A0248 /* DashboardCoordinator.swift in Sources */,
 				F3714B60278A1E0B008A0248 /* ArticleDetailViewController.swift in Sources */,
 				F3714B5C278A1774008A0248 /* ArticlesViewController.swift in Sources */,
 				F3714B58278A0935008A0248 /* MarketsCoordinator.swift in Sources */,
 				F3714B54278A085F008A0248 /* DashboardViewController.swift in Sources */,
+				F3714B67278A641F008A0248 /* Dashboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

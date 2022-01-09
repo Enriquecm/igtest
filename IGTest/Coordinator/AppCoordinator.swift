@@ -21,6 +21,12 @@ class AppCoordinator: Coordinator {
     }
 
     func start() {
+        navigateToTabBar()
+    }
+}
+
+private extension AppCoordinator {
+    func navigateToTabBar() {
         let tabCoordinator = TabCoordinator(navigationController)
         tabCoordinator.start()
         childCoordinators.append(tabCoordinator)

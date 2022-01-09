@@ -23,7 +23,14 @@ class ArticleDetailCoordinator: Coordinator, ArticleDetailCoordinatorProtocol {
     }
 
     func start() {
-        let articleDetailViewController = ArticleDetailViewController(coordinator: self)
-        navigationController.viewControllers = [articleDetailViewController]
+        navigateToArticleDetail()
+    }
+}
+
+private extension ArticleDetailCoordinator {
+    func navigateToArticleDetail() {
+        let viewModel = ArticleDetailViewModel(coordinator: self)
+        let viewController = ArticleDetailViewController(viewModel: viewModel)
+        navigationController.viewControllers = [viewController]
     }
 }

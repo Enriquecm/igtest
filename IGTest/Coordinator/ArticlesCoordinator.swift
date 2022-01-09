@@ -27,7 +27,14 @@ class ArticlesCoordinator: Coordinator {
     }
 
     func start() {
-        let articlesViewController = ArticlesViewController(coordinator: self)
+        navigateToArticles()
+    }
+}
+
+private extension ArticlesCoordinator {
+    func navigateToArticles() {
+        let viewModel = ArticlesViewModel(coordinator: self)
+        let articlesViewController = ArticlesViewController(viewModel: viewModel)
         navigationController.viewControllers = [articlesViewController]
     }
 }

@@ -23,7 +23,14 @@ class MarketsCoordinator: Coordinator, MarketsCoordinatorProtocol {
     }
 
     func start() {
-        let marketsViewController = MarketsViewController(coordinator: self)
-        navigationController.viewControllers = [marketsViewController]
+        navigateToMarkets()
+    }
+}
+
+private extension MarketsCoordinator {
+    func navigateToMarkets() {
+        let viewModel = MarketsViewModel(coordinator: self)
+        let viewController = MarketsViewController(viewModel: viewModel)
+        navigationController.viewControllers = [viewController]
     }
 }
