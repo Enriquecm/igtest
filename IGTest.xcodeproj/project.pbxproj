@@ -23,6 +23,22 @@
 		F3714B6E278A6C75008A0248 /* ArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B6D278A6C75008A0248 /* ArticlesViewModel.swift */; };
 		F3714B70278A6DED008A0248 /* ArticleDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B6F278A6DED008A0248 /* ArticleDetailViewModel.swift */; };
 		F3714B72278A6E17008A0248 /* MarketsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B71278A6E17008A0248 /* MarketsViewModel.swift */; };
+		F3714B75278A757E008A0248 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B74278A757E008A0248 /* Networking.swift */; };
+		F3714B77278A7BDB008A0248 /* NetworkTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B76278A7BDB008A0248 /* NetworkTask.swift */; };
+		F3714B79278A7BEA008A0248 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B78278A7BEA008A0248 /* HTTPMethod.swift */; };
+		F3714B7C278B2B0C008A0248 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B7B278B2B0C008A0248 /* NetworkConstants.swift */; };
+		F3714B7E278B3519008A0248 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B7D278B3519008A0248 /* NetworkingError.swift */; };
+		F3714B80278B40A0008A0248 /* NetworkDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B7F278B40A0008A0248 /* NetworkDataTask.swift */; };
+		F3714B83278B4147008A0248 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B82278B4147008A0248 /* NetworkError.swift */; };
+		F3714B85278B4A77008A0248 /* DiscardableResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B84278B4A77008A0248 /* DiscardableResult.swift */; };
+		F3714B8A278B5DC0008A0248 /* DailyFxAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B89278B5DC0008A0248 /* DailyFxAPI.swift */; };
+		F3714B8C278B6196008A0248 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B8B278B6196008A0248 /* Config.swift */; };
+		F3714B8E278B61D0008A0248 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B8D278B61D0008A0248 /* Endpoint.swift */; };
+		F3714B93278BAE84008A0248 /* DashboardEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B92278BAE84008A0248 /* DashboardEndpoint.swift */; };
+		F3714B95278BAF20008A0248 /* MarketsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B94278BAF20008A0248 /* MarketsEndpoint.swift */; };
+		F3714B99278BAFE8008A0248 /* DashboardRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B98278BAFE8008A0248 /* DashboardRequests.swift */; };
+		F3714B9B278BB32C008A0248 /* MarketsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B9A278BB32C008A0248 /* MarketsRequest.swift */; };
+		F3714B9D278BB443008A0248 /* Markets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B9C278BB443008A0248 /* Markets.swift */; };
 		F3F4266727852866002EC461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F4266627852866002EC461 /* AppDelegate.swift */; };
 		F3F4266927852866002EC461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F4266827852866002EC461 /* SceneDelegate.swift */; };
 		F3F4266B27852866002EC461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F4266A27852866002EC461 /* ViewController.swift */; };
@@ -70,6 +86,22 @@
 		F3714B6D278A6C75008A0248 /* ArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewModel.swift; sourceTree = "<group>"; };
 		F3714B6F278A6DED008A0248 /* ArticleDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailViewModel.swift; sourceTree = "<group>"; };
 		F3714B71278A6E17008A0248 /* MarketsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsViewModel.swift; sourceTree = "<group>"; };
+		F3714B74278A757E008A0248 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		F3714B76278A7BDB008A0248 /* NetworkTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTask.swift; sourceTree = "<group>"; };
+		F3714B78278A7BEA008A0248 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		F3714B7B278B2B0C008A0248 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		F3714B7D278B3519008A0248 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		F3714B7F278B40A0008A0248 /* NetworkDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataTask.swift; sourceTree = "<group>"; };
+		F3714B82278B4147008A0248 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		F3714B84278B4A77008A0248 /* DiscardableResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscardableResult.swift; sourceTree = "<group>"; };
+		F3714B89278B5DC0008A0248 /* DailyFxAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFxAPI.swift; sourceTree = "<group>"; };
+		F3714B8B278B6196008A0248 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		F3714B8D278B61D0008A0248 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		F3714B92278BAE84008A0248 /* DashboardEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardEndpoint.swift; sourceTree = "<group>"; };
+		F3714B94278BAF20008A0248 /* MarketsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsEndpoint.swift; sourceTree = "<group>"; };
+		F3714B98278BAFE8008A0248 /* DashboardRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRequests.swift; sourceTree = "<group>"; };
+		F3714B9A278BB32C008A0248 /* MarketsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsRequest.swift; sourceTree = "<group>"; };
+		F3714B9C278BB443008A0248 /* Markets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Markets.swift; sourceTree = "<group>"; };
 		F3F4266327852866002EC461 /* IGTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F4266627852866002EC461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F4266827852866002EC461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +163,8 @@
 				F3714B66278A641F008A0248 /* Dashboard.swift */,
 				F3714B68278A65FC008A0248 /* DailyBriefings.swift */,
 				F3714B6A278A660A008A0248 /* Report.swift */,
+				F3714B84278B4A77008A0248 /* DiscardableResult.swift */,
+				F3714B9C278BB443008A0248 /* Markets.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -143,6 +177,74 @@
 				F3714B71278A6E17008A0248 /* MarketsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F3714B73278A756C008A0248 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				F3714B81278B412E008A0248 /* Error */,
+				F3714B7A278B2AEE008A0248 /* Resources */,
+				F3714B74278A757E008A0248 /* Networking.swift */,
+				F3714B76278A7BDB008A0248 /* NetworkTask.swift */,
+				F3714B7F278B40A0008A0248 /* NetworkDataTask.swift */,
+				F3714B78278A7BEA008A0248 /* HTTPMethod.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		F3714B7A278B2AEE008A0248 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F3714B7B278B2B0C008A0248 /* NetworkConstants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F3714B81278B412E008A0248 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				F3714B7D278B3519008A0248 /* NetworkingError.swift */,
+				F3714B82278B4147008A0248 /* NetworkError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		F3714B86278B5D8A008A0248 /* DailyFxAPI */ = {
+			isa = PBXGroup;
+			children = (
+				F3714B89278B5DC0008A0248 /* DailyFxAPI.swift */,
+				F3714B8B278B6196008A0248 /* Config.swift */,
+				F3714B96278BAF68008A0248 /* Endpoint */,
+				F3714B97278BAF75008A0248 /* Requests */,
+			);
+			path = DailyFxAPI;
+			sourceTree = "<group>";
+		};
+		F3714B88278B5DAC008A0248 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				F3714B86278B5D8A008A0248 /* DailyFxAPI */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		F3714B96278BAF68008A0248 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				F3714B8D278B61D0008A0248 /* Endpoint.swift */,
+				F3714B92278BAE84008A0248 /* DashboardEndpoint.swift */,
+				F3714B94278BAF20008A0248 /* MarketsEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		F3714B97278BAF75008A0248 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				F3714B98278BAFE8008A0248 /* DashboardRequests.swift */,
+				F3714B9A278BB32C008A0248 /* MarketsRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 		F3F4265A27852866002EC461 = {
@@ -168,8 +270,10 @@
 		F3F4266527852866002EC461 /* IGTest */ = {
 			isa = PBXGroup;
 			children = (
+				F3714B88278B5DAC008A0248 /* APIs */,
 				F3F426962785294B002EC461 /* Coordinator */,
 				F3714B63278A62D1008A0248 /* Models */,
+				F3714B73278A756C008A0248 /* Networking */,
 				F3714B50278A05A7008A0248 /* ViewControllers */,
 				F3714B6C278A6C04008A0248 /* ViewModels */,
 				F3F4266627852866002EC461 /* AppDelegate.swift */,
@@ -343,16 +447,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3714B7C278B2B0C008A0248 /* NetworkConstants.swift in Sources */,
+				F3714B85278B4A77008A0248 /* DiscardableResult.swift in Sources */,
+				F3714B83278B4147008A0248 /* NetworkError.swift in Sources */,
 				F3F4269827852955002EC461 /* Coordinator.swift in Sources */,
+				F3714B77278A7BDB008A0248 /* NetworkTask.swift in Sources */,
+				F3714B75278A757E008A0248 /* Networking.swift in Sources */,
+				F3714B7E278B3519008A0248 /* NetworkingError.swift in Sources */,
 				F3714B6E278A6C75008A0248 /* ArticlesViewModel.swift in Sources */,
+				F3714B93278BAE84008A0248 /* DashboardEndpoint.swift in Sources */,
 				F3F4266B27852866002EC461 /* ViewController.swift in Sources */,
+				F3714B9D278BB443008A0248 /* Markets.swift in Sources */,
 				F3F4269A27852A7F002EC461 /* AppCoordinator.swift in Sources */,
+				F3714B9B278BB32C008A0248 /* MarketsRequest.swift in Sources */,
 				F3714B72278A6E17008A0248 /* MarketsViewModel.swift in Sources */,
 				F3714B69278A65FC008A0248 /* DailyBriefings.swift in Sources */,
+				F3714B79278A7BEA008A0248 /* HTTPMethod.swift in Sources */,
+				F3714B99278BAFE8008A0248 /* DashboardRequests.swift in Sources */,
 				F3F4266727852866002EC461 /* AppDelegate.swift in Sources */,
+				F3714B95278BAF20008A0248 /* MarketsEndpoint.swift in Sources */,
 				F3714B62278A1E29008A0248 /* ArticleDetailCoordinator.swift in Sources */,
 				F3714B52278A05C1008A0248 /* TabBarController.swift in Sources */,
+				F3714B8A278B5DC0008A0248 /* DailyFxAPI.swift in Sources */,
 				F3F4269C27852B06002EC461 /* TabCoordinator.swift in Sources */,
+				F3714B80278B40A0008A0248 /* NetworkDataTask.swift in Sources */,
 				F3714B5E278A17B3008A0248 /* ArticlesCoordinator.swift in Sources */,
 				F3714B6B278A660A008A0248 /* Report.swift in Sources */,
 				F3714B70278A6DED008A0248 /* ArticleDetailViewModel.swift in Sources */,
@@ -363,7 +481,9 @@
 				F3714B60278A1E0B008A0248 /* ArticleDetailViewController.swift in Sources */,
 				F3714B5C278A1774008A0248 /* ArticlesViewController.swift in Sources */,
 				F3714B58278A0935008A0248 /* MarketsCoordinator.swift in Sources */,
+				F3714B8C278B6196008A0248 /* Config.swift in Sources */,
 				F3714B54278A085F008A0248 /* DashboardViewController.swift in Sources */,
+				F3714B8E278B61D0008A0248 /* Endpoint.swift in Sources */,
 				F3714B67278A641F008A0248 /* Dashboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
