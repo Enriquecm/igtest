@@ -11,6 +11,7 @@ protocol MarketsCoordinatorProtocol: AnyObject { }
 
 class MarketsCoordinator: Coordinator, MarketsCoordinatorProtocol {
     private var navigationController: UINavigationController
+    private let api: DailyFxAPIProtocol
 
     var rootViewController: UIViewController {
         return navigationController
@@ -18,8 +19,9 @@ class MarketsCoordinator: Coordinator, MarketsCoordinatorProtocol {
 
     var childCoordinators = [Coordinator]()
 
-    init(_ navigationController: UINavigationController) {
+    init(_ navigationController: UINavigationController, api: DailyFxAPIProtocol) {
         self.navigationController = navigationController
+        self.api = api
     }
 
     func start() {
@@ -29,7 +31,7 @@ class MarketsCoordinator: Coordinator, MarketsCoordinatorProtocol {
 
 private extension MarketsCoordinator {
     func navigateToMarkets() {
-        let viewModel = MarketsViewModel(coordinator: self)
+        let viewModel = MarketsViewModel(coordinator: self, dataSource: .live(api: api))
         let viewController = MarketsViewController(viewModel: viewModel)
         navigationController.viewControllers = [viewController]
     }

@@ -39,6 +39,8 @@
 		F3714B99278BAFE8008A0248 /* DashboardRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B98278BAFE8008A0248 /* DashboardRequests.swift */; };
 		F3714B9B278BB32C008A0248 /* MarketsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B9A278BB32C008A0248 /* MarketsRequest.swift */; };
 		F3714B9D278BB443008A0248 /* Markets.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B9C278BB443008A0248 /* Markets.swift */; };
+		F3714BA0278BBCF3008A0248 /* DashboardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B9F278BBCF2008A0248 /* DashboardDataSource.swift */; };
+		F3714BA2278BBE10008A0248 /* MarketsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714BA1278BBE10008A0248 /* MarketsDataSource.swift */; };
 		F3F4266727852866002EC461 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F4266627852866002EC461 /* AppDelegate.swift */; };
 		F3F4266927852866002EC461 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F4266827852866002EC461 /* SceneDelegate.swift */; };
 		F3F4266B27852866002EC461 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3F4266A27852866002EC461 /* ViewController.swift */; };
@@ -102,6 +104,8 @@
 		F3714B98278BAFE8008A0248 /* DashboardRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRequests.swift; sourceTree = "<group>"; };
 		F3714B9A278BB32C008A0248 /* MarketsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsRequest.swift; sourceTree = "<group>"; };
 		F3714B9C278BB443008A0248 /* Markets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Markets.swift; sourceTree = "<group>"; };
+		F3714B9F278BBCF2008A0248 /* DashboardDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardDataSource.swift; sourceTree = "<group>"; };
+		F3714BA1278BBE10008A0248 /* MarketsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsDataSource.swift; sourceTree = "<group>"; };
 		F3F4266327852866002EC461 /* IGTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F4266627852866002EC461 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3F4266827852866002EC461 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -247,6 +251,15 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		F3714B9E278BBCF2008A0248 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				F3714B9F278BBCF2008A0248 /* DashboardDataSource.swift */,
+				F3714BA1278BBE10008A0248 /* MarketsDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
 		F3F4265A27852866002EC461 = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +285,7 @@
 			children = (
 				F3714B88278B5DAC008A0248 /* APIs */,
 				F3F426962785294B002EC461 /* Coordinator */,
+				F3714B9E278BBCF2008A0248 /* DataSource */,
 				F3714B63278A62D1008A0248 /* Models */,
 				F3714B73278A756C008A0248 /* Networking */,
 				F3714B50278A05A7008A0248 /* ViewControllers */,
@@ -451,6 +465,7 @@
 				F3714B85278B4A77008A0248 /* DiscardableResult.swift in Sources */,
 				F3714B83278B4147008A0248 /* NetworkError.swift in Sources */,
 				F3F4269827852955002EC461 /* Coordinator.swift in Sources */,
+				F3714BA2278BBE10008A0248 /* MarketsDataSource.swift in Sources */,
 				F3714B77278A7BDB008A0248 /* NetworkTask.swift in Sources */,
 				F3714B75278A757E008A0248 /* Networking.swift in Sources */,
 				F3714B7E278B3519008A0248 /* NetworkingError.swift in Sources */,
@@ -459,6 +474,7 @@
 				F3F4266B27852866002EC461 /* ViewController.swift in Sources */,
 				F3714B9D278BB443008A0248 /* Markets.swift in Sources */,
 				F3F4269A27852A7F002EC461 /* AppCoordinator.swift in Sources */,
+				F3714BA0278BBCF3008A0248 /* DashboardDataSource.swift in Sources */,
 				F3714B9B278BB32C008A0248 /* MarketsRequest.swift in Sources */,
 				F3714B72278A6E17008A0248 /* MarketsViewModel.swift in Sources */,
 				F3714B69278A65FC008A0248 /* DailyBriefings.swift in Sources */,

@@ -9,7 +9,7 @@ import Foundation
 
 typealias MarketsRequestCompletion = (Result<Markets, NetworkError<DiscardableResult>>) -> Void
 
-extension DailyFxAPI {
+extension DailyFxAPIProtocol {
     func requestMarkets(completion: @escaping MarketsRequestCompletion) {
         let endpoint = MarketsEndpoint.getMarkets()
 

@@ -7,6 +7,15 @@
 
 import Foundation
 
+/// Use this protocol to determine all the main properties to build the final url of a specific endpoint.
+///
+/// - Parameters:
+///     - apiVersion: Version of the api
+///     - path: Specific url path
+///     - method: `HTTPMethod` for request, this contains the payload info. Defaults to `.get(.empty)`.
+///     - headers: Header fields to be injected into request.
+///
+
 protocol Endpoint {
     var apiVersion: String { get }
     var path: String { get }

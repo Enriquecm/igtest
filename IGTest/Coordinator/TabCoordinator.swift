@@ -10,7 +10,8 @@ import UIKit
 protocol TabCoordinatorProtocol: AnyObject { }
 
 class TabCoordinator: Coordinator, TabCoordinatorProtocol {
-    private var navigationController: UINavigationController
+    private let navigationController: UINavigationController
+    private let api: DailyFxAPIProtocol
 
     var rootViewController: UIViewController {
         return navigationController
@@ -18,8 +19,9 @@ class TabCoordinator: Coordinator, TabCoordinatorProtocol {
     
     var childCoordinators = [Coordinator]()
 
-    init(_ navigationController: UINavigationController) {
+    init(_ navigationController: UINavigationController, api: DailyFxAPIProtocol) {
         self.navigationController = navigationController
+        self.api = api
     }
 
     func start() {
@@ -28,7 +30,7 @@ class TabCoordinator: Coordinator, TabCoordinatorProtocol {
         let tabBarController = TabBarController(coordinator: self)
 
         // Dashboard
-        let dashboardCoordinator = DashboardCoordinator(navigationController)
+        let dashboardCoordinator = DashboardCoordinator(navigationController, api: api)
         dashboardCoordinator.start()
 
         let dashboardRootViewController = dashboardCoordinator.rootViewController
@@ -38,7 +40,7 @@ class TabCoordinator: Coordinator, TabCoordinatorProtocol {
         let marketsNavigationController = UINavigationController()
         marketsNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 1)
 
-        let marketsCoordinator = MarketsCoordinator(marketsNavigationController)
+        let marketsCoordinator = MarketsCoordinator(marketsNavigationController, api: api)
         marketsCoordinator.start()
 
         tabBarController.viewControllers = [dashboardRootViewController,

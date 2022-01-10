@@ -13,6 +13,7 @@ protocol DashboardCoordinatorProtocol: AnyObject {
 
 class DashboardCoordinator: Coordinator {
     private let navigationController: UINavigationController
+    private let api: DailyFxAPIProtocol
 
     private lazy var splitViewController: UISplitViewController = {
         return DashboardViewController(coordinator: self)
@@ -24,13 +25,14 @@ class DashboardCoordinator: Coordinator {
 
     var childCoordinators = [Coordinator]()
 
-    init(_ navigationController: UINavigationController) {
+    init(_ navigationController: UINavigationController, api: DailyFxAPIProtocol) {
         self.navigationController = navigationController
+        self.api = api
     }
 
     func start() {
         let articlesNavigationController = UINavigationController()
-        let articlesCoordinator = ArticlesCoordinator(articlesNavigationController)
+        let articlesCoordinator = ArticlesCoordinator(articlesNavigationController, api: api)
         articlesCoordinator.dashboardCoordinator = self
         articlesCoordinator.start()
 

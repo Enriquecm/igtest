@@ -5,12 +5,33 @@
 //  Created by Enrique Melgarejo on 09/01/22.
 //
 
+import Combine
 import Foundation
 
 class ArticlesViewModel {
-    weak var coordinator: ArticlesCoordinatorProtocol?
+    private var cancellables = Set<AnyCancellable>()
 
-    init(coordinator: ArticlesCoordinatorProtocol) {
+    private weak var coordinator: ArticlesCoordinatorProtocol?
+    private let dataSource: DashboardDataSource
+
+    init(coordinator: ArticlesCoordinatorProtocol, dataSource: DashboardDataSource) {
         self.coordinator = coordinator
+        self.dataSource = dataSource
+    }
+
+    func fetchDashboard() {
+        dataSource.requestDashboard()
+            .receive(on: RunLoop.main)
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    break
+                case .finished:
+                    break
+                }
+            }, receiveValue: { dashboard in
+
+            })
+            .store(in: &cancellables)
     }
 }

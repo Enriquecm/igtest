@@ -9,7 +9,7 @@ import Foundation
 
 typealias DashboardRequestCompletion = (Result<Dashboard, NetworkError<DiscardableResult>>) -> Void
 
-extension DailyFxAPI {
+extension DailyFxAPIProtocol {
     func requestDashboard(completion: @escaping DashboardRequestCompletion) {
         let endpoint = DashboardEndpoint.getDashboard()
 

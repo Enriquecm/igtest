@@ -12,7 +12,8 @@ protocol ArticlesCoordinatorProtocol: AnyObject {
 }
 
 class ArticlesCoordinator: Coordinator {
-    private var navigationController: UINavigationController
+    private let navigationController: UINavigationController
+    private let api: DailyFxAPIProtocol
 
     var rootViewController: UIViewController {
         return navigationController
@@ -22,8 +23,9 @@ class ArticlesCoordinator: Coordinator {
 
     var dashboardCoordinator: DashboardCoordinatorProtocol?
 
-    init(_ navigationController: UINavigationController) {
+    init(_ navigationController: UINavigationController, api: DailyFxAPIProtocol) {
         self.navigationController = navigationController
+        self.api = api
     }
 
     func start() {
@@ -33,7 +35,7 @@ class ArticlesCoordinator: Coordinator {
 
 private extension ArticlesCoordinator {
     func navigateToArticles() {
-        let viewModel = ArticlesViewModel(coordinator: self)
+        let viewModel = ArticlesViewModel(coordinator: self, dataSource: .live(api: api))
         let articlesViewController = ArticlesViewController(viewModel: viewModel)
         navigationController.viewControllers = [articlesViewController]
     }

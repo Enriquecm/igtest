@@ -8,6 +8,14 @@
 import Combine
 import Foundation
 
+protocol DailyFxAPIProtocol {
+    @discardableResult
+    func request<T: Decodable, E: Decodable>(
+        _ endpoint: Endpoint,
+        then completion: @escaping (HTTPURLResponse?, Result<T, NetworkError<E>>) -> Void
+    ) -> NetworkDataTask<T, E>
+}
+
 struct DailyFxAPI {
     let configuration: Config
     let networking: Networking
@@ -23,7 +31,7 @@ struct DailyFxAPI {
     }
 }
 
-extension DailyFxAPI {
+extension DailyFxAPI: DailyFxAPIProtocol {
     @discardableResult
     func request<T: Decodable, E: Decodable>(
         _ endpoint: Endpoint,
