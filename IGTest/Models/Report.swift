@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Report: Codable {
+struct Report: Codable, Equatable {
     let title: String?
     let url: String?
     let description: String?

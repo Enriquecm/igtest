@@ -7,5 +7,5 @@
 
 import Foundation
 
-struct Markets: Codable {
+struct Markets: Codable, Equatable {
 }

@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct DailyBriefings: Codable {
+struct DailyBriefings: Codable, Equatable {
     let eu, asia, us: [Report]?
 }

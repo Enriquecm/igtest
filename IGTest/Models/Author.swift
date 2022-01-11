@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Author: Codable {
+struct Author: Codable, Equatable {
     let name: String?
     let title: String?
     let photo: String?

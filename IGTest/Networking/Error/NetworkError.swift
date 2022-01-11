@@ -16,3 +16,15 @@ struct NetworkError<T>: Error where T: Decodable {
         self.object = object
     }
 }
+
+extension NetworkError: Equatable where T: Equatable {
+    static func == (lhs: NetworkError<T>, rhs: NetworkError<T>) -> Bool {
+        let lhserror = lhs.error as NSError
+        let rhserror = rhs.error as NSError
+
+        let nserror = lhserror.domain == rhserror.domain && lhserror.code == rhserror.code
+        let object = lhs.object == rhs.object
+
+        return nserror && object
+    }
+}

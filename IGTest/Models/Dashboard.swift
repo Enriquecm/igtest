@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Dashboard: Codable {
+struct Dashboard: Codable, Equatable {
     let topNews: [Report]?
     let dailyBriefings: DailyBriefings?
     let technicalAnalysis, specialReport: [Report]?

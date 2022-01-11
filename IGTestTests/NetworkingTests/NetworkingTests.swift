@@ -36,7 +36,7 @@ class NetworkingTests: XCTestCase {
             return (HTTPURLResponse(), mockData)
         }
 
-        let expectation = XCTestExpectation(description: "response")
+        let expectation = XCTestExpectation(description: "testRequest")
 
         let task = NetworkDataTask<EncodableStub, DiscardableResult>(url: Constants.url) { request, response, result in
 

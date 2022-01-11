@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NetworkingError: Error {
+enum NetworkingError: Error, Equatable {
     case `default`
     
     // Request Error

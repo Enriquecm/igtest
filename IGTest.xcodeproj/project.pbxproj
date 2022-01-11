@@ -11,6 +11,7 @@
 		F33ECC6B278D13FB006247AC /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECC6A278D13FB006247AC /* Models.swift */; };
 		F33ECC6F278D1937006247AC /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECC6E278D1937006247AC /* MockURLProtocol.swift */; };
 		F33ECC71278D197D006247AC /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECC70278D197D006247AC /* NetworkingTests.swift */; };
+		F33ECC90278D8701006247AC /* DailyFxAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECC8F278D8701006247AC /* DailyFxAPITests.swift */; };
 		F3714B52278A05C1008A0248 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B51278A05C1008A0248 /* TabBarController.swift */; };
 		F3714B54278A085F008A0248 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B53278A085F008A0248 /* DashboardViewController.swift */; };
 		F3714B56278A091A008A0248 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B55278A091A008A0248 /* DashboardCoordinator.swift */; };
@@ -80,6 +81,7 @@
 		F33ECC6A278D13FB006247AC /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		F33ECC6E278D1937006247AC /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		F33ECC70278D197D006247AC /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
+		F33ECC8F278D8701006247AC /* DailyFxAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFxAPITests.swift; sourceTree = "<group>"; };
 		F3714B51278A05C1008A0248 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F3714B53278A085F008A0248 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F3714B55278A091A008A0248 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
@@ -179,6 +181,14 @@
 				F33ECC6E278D1937006247AC /* MockURLProtocol.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		F33ECC8E278D86E9006247AC /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				F33ECC8F278D8701006247AC /* DailyFxAPITests.swift */,
+			);
+			path = APIs;
 			sourceTree = "<group>";
 		};
 		F3714B50278A05A7008A0248 /* ViewControllers */ = {
@@ -336,6 +346,7 @@
 		F3F4267C2785286A002EC461 /* IGTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				F33ECC8E278D86E9006247AC /* APIs */,
 				F33ECC6D278D1929006247AC /* Mocks */,
 				F33ECC6C278D140B006247AC /* Models */,
 				F33ECC67278D0EF5006247AC /* NetworkingTests */,
@@ -548,6 +559,7 @@
 				F33ECC69278D0F0D006247AC /* NetworkingDataTaskTests.swift in Sources */,
 				F3F4267E2785286A002EC461 /* IGTestTests.swift in Sources */,
 				F33ECC71278D197D006247AC /* NetworkingTests.swift in Sources */,
+				F33ECC90278D8701006247AC /* DailyFxAPITests.swift in Sources */,
 				F33ECC6F278D1937006247AC /* MockURLProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

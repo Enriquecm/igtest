@@ -12,4 +12,4 @@ public struct DiscardableResult {
     init() { }
 }
 
-extension DiscardableResult: Decodable { }
+extension DiscardableResult: Decodable, Equatable { }
