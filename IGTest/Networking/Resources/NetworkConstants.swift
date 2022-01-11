@@ -16,4 +16,7 @@ enum NetworkConstants {
 
     // Response
     static let successResponseRange = 200...299
+
+    // Content Type Value
+    static let contentTypeValue = "application/json"
 }

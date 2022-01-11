@@ -11,13 +11,16 @@ import Foundation
 struct Networking {
     /// Private session for networking requests
     private let session: URLSession
+    private let decoder: JSONDecoder
     
     /// This is the sole constructor of this class, it takes URLSession as parameter
     ///
     /// - Parameters:
     ///   - session: Default value uses URLSessionConfiguration.default to create an URLSession
-    init(session: URLSession = URLSession(configuration: URLSessionConfiguration.default)) {
+    init(session: URLSession = URLSession(configuration: URLSessionConfiguration.default),
+         decoder: JSONDecoder = JSONDecoder()) {
         self.session = session
+        self.decoder = decoder
     }
 
     /// Use this method to perform the network request.
@@ -65,16 +68,17 @@ private extension Networking {
                         NetworkConstants.successResponseRange ~= validResponse.statusCode {
 
                         // Valid http response
-                        do {
-                            // TODO: Decode data
+                        if let data = data, let object = try? decoder.decode(T.self, from: data) {
+                            result = .success(object)
+                        } else {
                             result = .failure(NetworkError(error: NetworkingError.badData(response: validResponse)))
-                        } catch let error {
-                            result = .failure(NetworkError(error: error))
                         }
                     } else if let validResponse = response as? HTTPURLResponse {
                         let errorObject: E?
                         if E.self is DiscardableResult.Type {
                             errorObject = nil
+                        } else if let data = data, let parsedObject = try? decoder.decode(E.self, from: data) {
+                            errorObject = parsedObject
                         } else {
                             errorObject = nil
                         }

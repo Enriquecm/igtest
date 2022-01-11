@@ -17,6 +17,7 @@ class NetworkTask {
     let headerFields: [String: String]
     let timeout: TimeInterval
     let qosClass: DispatchQoS.QoSClass
+    let encoder: JSONEncoder
 
     // MARK: Lifecycle
 
@@ -28,12 +29,14 @@ class NetworkTask {
     ///   - headerFields: Header fields to be injected into request. Defaults to `[:]`.
     ///   - timeout: Optional value for the `URLRequest`'s timeoutInterval. Defaults to `60`.
     ///   - qosClass: Dispatch queue class where the request will do its work (e.g. encoding and decoding processing). Defaults to `.userInitiated`.
+    ///   - encoder: Encoder to encode bodyData. Defaults to `JSONEncoder()`.
     init(
         url: URL,
         method: HTTPMethod = .get(.empty),
         headerFields: [String: String] = [:],
         timeout: TimeInterval? = nil,
-        qosClass: DispatchQoS.QoSClass = .userInitiated
+        qosClass: DispatchQoS.QoSClass = .userInitiated,
+        encoder: JSONEncoder = JSONEncoder()
     ) {
         self.url = url
         self.method = method
@@ -41,6 +44,7 @@ class NetworkTask {
 
         self.timeout = timeout ?? NetworkConstants.timeoutInterval
         self.qosClass = qosClass
+        self.encoder = encoder
     }
 
     // MARK: Methods
@@ -136,8 +140,14 @@ private extension NetworkTask {
         }
     }
 
-    func bodyData(encodable: Encodable) throws -> (Data?, String?) {
-        // TODO: Encode data
-        throw NetworkingError.invalidEncodable
+    func bodyData(encodable: Encodable) throws -> (Data, String?) {
+        let object = try encodable.encoded(with: encoder)
+        return (object, NetworkConstants.contentTypeValue)
+    }
+}
+
+private extension Encodable {
+    func encoded(with encoder: JSONEncoder) throws -> Data {
+        try encoder.encode(self)
     }
 }
