@@ -53,6 +53,14 @@ class ArticlesViewController: UIViewController {
         loadContent()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        tableView.indexPathsForSelectedRows?.forEach {
+            tableView.deselectRow(at: $0, animated: false)
+        }
+    }
+
     // MARK: - Private methods
 
     private func setupBindings() {

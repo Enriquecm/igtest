@@ -26,6 +26,7 @@
 		F33ECCB1278E6165006247AC /* Market.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECCB0278E6164006247AC /* Market.swift */; };
 		F33ECCB3278E6258006247AC /* MarketSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECCB2278E6258006247AC /* MarketSection.swift */; };
 		F33ECCB7278E7039006247AC /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECCB6278E7038006247AC /* ArticleDetailView.swift */; };
+		F33ECCD6278EDBD7006247AC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F33ECCD5278EDBD6006247AC /* README.md */; };
 		F3714B52278A05C1008A0248 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B51278A05C1008A0248 /* TabBarController.swift */; };
 		F3714B54278A085F008A0248 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B53278A085F008A0248 /* DashboardViewController.swift */; };
 		F3714B56278A091A008A0248 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B55278A091A008A0248 /* DashboardCoordinator.swift */; };
@@ -110,6 +111,7 @@
 		F33ECCB0278E6164006247AC /* Market.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Market.swift; sourceTree = "<group>"; };
 		F33ECCB2278E6258006247AC /* MarketSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSection.swift; sourceTree = "<group>"; };
 		F33ECCB6278E7038006247AC /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		F33ECCD5278EDBD6006247AC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F3714B51278A05C1008A0248 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F3714B53278A085F008A0248 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F3714B55278A091A008A0248 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
@@ -277,6 +279,14 @@
 			path = Color;
 			sourceTree = "<group>";
 		};
+		F33ECCD4278ED913006247AC /* Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				F33ECCD5278EDBD6006247AC /* README.md */,
+			);
+			name = Metadata;
+			sourceTree = "<group>";
+		};
 		F3714B50278A05A7008A0248 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +404,7 @@
 		F3F4265A27852866002EC461 = {
 			isa = PBXGroup;
 			children = (
+				F33ECCD4278ED913006247AC /* Metadata */,
 				F3F4266527852866002EC461 /* IGTest */,
 				F3F4267C2785286A002EC461 /* IGTestTests */,
 				F3F426862785286A002EC461 /* IGTestUITests */,
@@ -572,6 +583,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F33ECCD6278EDBD7006247AC /* README.md in Resources */,
 				F3F426732785286A002EC461 /* LaunchScreen.storyboard in Resources */,
 				F3F426702785286A002EC461 /* Assets.xcassets in Resources */,
 			);

@@ -64,8 +64,8 @@ class ArticleDetailView: UIView {
     private func setupStackView() {
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(descriptionLabel)
-        stackView.addArrangedSubview(authorsLabel)
         stackView.addArrangedSubview(tagsLabel)
+        stackView.addArrangedSubview(authorsLabel)
 
         stackView.distribution = .fill
         stackView.axis = .vertical
@@ -78,8 +78,6 @@ class ArticleDetailView: UIView {
         titleLabel.font = UIFont.boldSystemFont(ofSize: Constants.titleFontSize)
         titleLabel.numberOfLines = 0
         titleLabel.lineBreakMode = .byWordWrapping
-        titleLabel.setContentCompressionResistancePriority(UILayoutPriority(999), for: .vertical)
-        titleLabel.setContentHuggingPriority(UILayoutPriority(750), for: .vertical)
     }
 
     private func setupDescriptionLabel() {
@@ -87,8 +85,6 @@ class ArticleDetailView: UIView {
         descriptionLabel.font = UIFont.systemFont(ofSize: Constants.descriptionFontSize)
         descriptionLabel.numberOfLines = 0
         descriptionLabel.lineBreakMode = .byWordWrapping
-        descriptionLabel.setContentCompressionResistancePriority(UILayoutPriority(800), for: .vertical)
-        descriptionLabel.setContentHuggingPriority(UILayoutPriority(999), for: .vertical)
     }
 
     private func setupAuthorsLabel() {
