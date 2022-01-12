@@ -12,3 +12,16 @@ struct Dashboard: Codable, Equatable {
     let dailyBriefings: DailyBriefings?
     let technicalAnalysis, specialReport: [Report]?
 }
+
+#if DEBUG
+extension Dashboard {
+    static var mock: Self {
+        return Self(
+            topNews: [Report.mock, Report.mock],
+            dailyBriefings: nil,
+            technicalAnalysis: [Report.mock],
+            specialReport: [Report.mock, Report.mock, Report.mock]
+        )
+    }
+}
+#endif

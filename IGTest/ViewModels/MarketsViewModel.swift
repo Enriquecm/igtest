@@ -44,7 +44,7 @@ extension MarketsViewModel {
 
         // Indices
         if let indices = markets.indices {
-            sections.append(MarketSection(title: "indices", markets: indices))
+            sections.append(MarketSection(title: "Indices", markets: indices))
         }
 
         if sections.isEmpty {

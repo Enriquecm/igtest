@@ -17,3 +17,20 @@ struct Market: Codable, Equatable {
     let unscaledDecimals: Int?
     let calendarMapping: [String]?
 }
+
+#if DEBUG
+extension Market {
+    static var mock: Self {
+        return Self(
+            displayName: "Mock name",
+            marketId: nil,
+            epic: nil,
+            rateDetailURL: nil,
+            topMarket: nil,
+            unscalingFactor: nil,
+            unscaledDecimals: nil,
+            calendarMapping: nil
+        )
+    }
+}
+#endif

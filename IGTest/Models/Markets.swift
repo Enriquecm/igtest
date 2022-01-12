@@ -12,3 +12,15 @@ struct Markets: Codable, Equatable {
     let commodities: [Market]?
     let indices: [Market]?
 }
+
+#if DEBUG
+extension Markets {
+    static var mock: Self {
+        return Self(
+            currencies: [Market.mock, Market.mock],
+            commodities: [Market.mock],
+            indices: [Market.mock, Market.mock, Market.mock]
+        )
+    }
+}
+#endif

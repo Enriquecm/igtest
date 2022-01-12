@@ -20,11 +20,11 @@ extension MarketsDataSource {
     }
 
     #if DEBUG
-//    static let mock = MarketsDataSource(
-//        requestMarkets: { _, _ in
-//            CurrentValueSubject<Markets, NetworkError<DiscardableResult>>(Markets.mock).eraseToAnyPublisher()
-//        }
-//    )
+    static let mock = MarketsDataSource(
+        requestMarkets: {
+            CurrentValueSubject<Markets, NetworkError<DiscardableResult>>(Markets.mock).eraseToAnyPublisher()
+        }
+    )
 
     static let failed = MarketsDataSource(
         requestMarkets: {

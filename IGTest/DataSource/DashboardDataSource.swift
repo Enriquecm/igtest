@@ -20,11 +20,11 @@ extension DashboardDataSource {
     }
 
     #if DEBUG
-//    static let mock = DashboardDataSource(
-//        requestDashboard: { _, _ in
-//            CurrentValueSubject<Dashboard, NetworkError<DiscardableResult>>(Dashboard.mock).eraseToAnyPublisher()
-//        }
-//    )
+    static let mock = DashboardDataSource(
+        requestDashboard: {
+            CurrentValueSubject<Dashboard, NetworkError<DiscardableResult>>(Dashboard.mock).eraseToAnyPublisher()
+        }
+    )
 
     static let failed = DashboardDataSource(
         requestDashboard: {

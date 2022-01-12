@@ -65,7 +65,9 @@ class DailyFxAPITests: XCTestCase {
 
     func testRequestDashboardWithError() throws {
 
-        let expectedError = NetworkError<DiscardableResult>(error: NetworkingError.invalidURL)
+        let expectedError = NetworkError<DiscardableResult>(
+            error: .connectionError(errorMessage: NetworkingError.invalidURL.localizedDescription)
+        )
 
         MockURLProtocol.requestHandler = { request in
             throw NetworkingError.invalidURL
@@ -89,7 +91,7 @@ class DailyFxAPITests: XCTestCase {
     // MARK: - Markets
     func testRequestMarkets() throws {
 
-        let expectedData = Markets()
+        let expectedData = Markets(currencies: [], commodities: [], indices: [])
 
         let mockData = try JSONEncoder().encode(expectedData)
         MockURLProtocol.requestHandler = { request in
@@ -113,7 +115,9 @@ class DailyFxAPITests: XCTestCase {
 
     func testRequestMarketsWithError() throws {
 
-        let expectedError = NetworkError<DiscardableResult>(error: NetworkingError.invalidURL)
+        let expectedError = NetworkError<DiscardableResult>(
+            error: .connectionError(errorMessage: NetworkingError.invalidURL.localizedDescription)
+        )
 
         MockURLProtocol.requestHandler = { request in
             throw NetworkingError.invalidURL

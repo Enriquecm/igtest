@@ -21,7 +21,7 @@ enum PlatformError: IGError, Error {
     }
 }
 
-enum BusinessError: IGError, Error {
+enum BusinessError: IGError, Error, Equatable {
     case unknown
     case dashboardNotFound
     case marketsNotFound
