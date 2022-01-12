@@ -29,7 +29,8 @@ class TabBarController: UITabBarController {
     }
 
     private func setupUI() {
-        view.backgroundColor = .systemGroupedBackground
+        tabBar.barTintColor = ColorPalette.background
+        tabBar.isTranslucent = false
 
         let topline = CALayer()
         topline.frame = CGRect(x: 0, y: 0, width: self.tabBar.frame.width, height: 1)

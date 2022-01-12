@@ -33,6 +33,7 @@ private extension MarketsCoordinator {
     func navigateToMarkets() {
         let viewModel = MarketsViewModel(coordinator: self, dataSource: .live(api: api))
         let viewController = MarketsViewController(viewModel: viewModel)
+        viewController.title = "Markets"
         navigationController.viewControllers = [viewController]
     }
 }

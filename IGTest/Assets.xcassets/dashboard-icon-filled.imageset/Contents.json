@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "dashboard-icon-filled.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

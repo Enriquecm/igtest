@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ArticlesCoordinatorProtocol: AnyObject {
-    func didSelectButton()
+    func didSelect(report: Report)
 }
 
 class ArticlesCoordinator: Coordinator {
@@ -36,13 +36,16 @@ class ArticlesCoordinator: Coordinator {
 private extension ArticlesCoordinator {
     func navigateToArticles() {
         let viewModel = ArticlesViewModel(coordinator: self, dataSource: .live(api: api))
-        let articlesViewController = ArticlesViewController(viewModel: viewModel)
-        navigationController.viewControllers = [articlesViewController]
+        let viewController = ArticlesViewController(viewModel: viewModel)
+        viewController.title = "Dashboard"
+        navigationController.viewControllers = [viewController]
+        navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.backgroundColor = ColorPalette.background
     }
 }
 
 extension ArticlesCoordinator: ArticlesCoordinatorProtocol {
-    func didSelectButton() {
-        dashboardCoordinator?.didSelectButton()
+    func didSelect(report: Report) {
+        dashboardCoordinator?.didSelect(report: report)
     }
 }

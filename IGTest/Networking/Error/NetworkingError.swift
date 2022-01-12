@@ -17,6 +17,7 @@ enum NetworkingError: Error, Equatable {
 
     // Response Error
     case invalidResponse
+    case connectionError(errorMessage: String)
     case badData(response: HTTPURLResponse)
     case invalidStatusCode(response: HTTPURLResponse)
     case badURL(response: HTTPURLResponse)

@@ -8,10 +8,10 @@
 import Foundation
 
 struct NetworkError<T>: Error where T: Decodable {
-    public let error: Error
+    public let error: NetworkingError
     public let object: T?
 
-    init(error: Error, object: T? = nil) {
+    init(error: NetworkingError, object: T? = nil) {
         self.error = error
         self.object = object
     }

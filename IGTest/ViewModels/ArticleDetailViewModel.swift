@@ -8,9 +8,13 @@
 import Foundation
 
 class ArticleDetailViewModel {
-    weak var coordinator: ArticleDetailCoordinatorProtocol?
+    private weak var coordinator: ArticleDetailCoordinatorProtocol?
+    private let report: Report
 
-    init(coordinator: ArticleDetailCoordinatorProtocol) {
+    init(coordinator: ArticleDetailCoordinatorProtocol, report: Report) {
         self.coordinator = coordinator
+        self.report = report
     }
+
+    
 }

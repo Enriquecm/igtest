@@ -58,11 +58,9 @@ private extension Networking {
                 let result: Result<T, NetworkError<E>>
 
                 if let connectionError = error {
-
                     // Doesn't mean http error, it's a connection error most likely
-                    result = .failure(NetworkError(error: connectionError))
+                    result = .failure(NetworkError(error: .connectionError(errorMessage: connectionError.localizedDescription)))
                 } else {
-
                     // No connection error, we might have an http error though
                     if let validResponse = response as? HTTPURLResponse,
                         NetworkConstants.successResponseRange ~= validResponse.statusCode {

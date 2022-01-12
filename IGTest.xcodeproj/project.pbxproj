@@ -12,6 +12,17 @@
 		F33ECC6F278D1937006247AC /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECC6E278D1937006247AC /* MockURLProtocol.swift */; };
 		F33ECC71278D197D006247AC /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECC70278D197D006247AC /* NetworkingTests.swift */; };
 		F33ECC90278D8701006247AC /* DailyFxAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECC8F278D8701006247AC /* DailyFxAPITests.swift */; };
+		F33ECC93278D9FBD006247AC /* ReportSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECC92278D9FBD006247AC /* ReportSection.swift */; };
+		F33ECC96278DB0BB006247AC /* IGError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECC95278DB0BB006247AC /* IGError.swift */; };
+		F33ECC99278DD6E1006247AC /* ReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECC98278DD6E0006247AC /* ReportTableViewCell.swift */; };
+		F33ECC9D278DD807006247AC /* CellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECC9C278DD806006247AC /* CellProtocol.swift */; };
+		F33ECC9F278DDFA9006247AC /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECC9E278DDFA9006247AC /* UIViewControllerExtensions.swift */; };
+		F33ECCA1278DE950006247AC /* PublisherExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECCA0278DE950006247AC /* PublisherExtensions.swift */; };
+		F33ECCA3278E01C8006247AC /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECCA2278E01C7006247AC /* LoadingView.swift */; };
+		F33ECCA5278E0217006247AC /* LoadingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECCA4278E0217006247AC /* LoadingProtocol.swift */; };
+		F33ECCA7278E02B4006247AC /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECCA6278E02B4006247AC /* UIViewExtensions.swift */; };
+		F33ECCAA278E434A006247AC /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECCA9278E434A006247AC /* ColorPalette.swift */; };
+		F33ECCAC278E43DA006247AC /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33ECCAB278E43DA006247AC /* UIColorExtensions.swift */; };
 		F3714B52278A05C1008A0248 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B51278A05C1008A0248 /* TabBarController.swift */; };
 		F3714B54278A085F008A0248 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B53278A085F008A0248 /* DashboardViewController.swift */; };
 		F3714B56278A091A008A0248 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3714B55278A091A008A0248 /* DashboardCoordinator.swift */; };
@@ -82,6 +93,17 @@
 		F33ECC6E278D1937006247AC /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		F33ECC70278D197D006247AC /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		F33ECC8F278D8701006247AC /* DailyFxAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyFxAPITests.swift; sourceTree = "<group>"; };
+		F33ECC92278D9FBD006247AC /* ReportSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportSection.swift; sourceTree = "<group>"; };
+		F33ECC95278DB0BB006247AC /* IGError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGError.swift; sourceTree = "<group>"; };
+		F33ECC98278DD6E0006247AC /* ReportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportTableViewCell.swift; sourceTree = "<group>"; };
+		F33ECC9C278DD806006247AC /* CellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellProtocol.swift; sourceTree = "<group>"; };
+		F33ECC9E278DDFA9006247AC /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		F33ECCA0278DE950006247AC /* PublisherExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherExtensions.swift; sourceTree = "<group>"; };
+		F33ECCA2278E01C7006247AC /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		F33ECCA4278E0217006247AC /* LoadingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingProtocol.swift; sourceTree = "<group>"; };
+		F33ECCA6278E02B4006247AC /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		F33ECCA9278E434A006247AC /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		F33ECCAB278E43DA006247AC /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		F3714B51278A05C1008A0248 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		F3714B53278A085F008A0248 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		F3714B55278A091A008A0248 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
@@ -191,6 +213,62 @@
 			path = APIs;
 			sourceTree = "<group>";
 		};
+		F33ECC91278D9F74006247AC /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				F33ECC92278D9FBD006247AC /* ReportSection.swift */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		F33ECC94278DB022006247AC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F33ECCA8278E4322006247AC /* Color */,
+				F33ECC9A278DD6F3006247AC /* Extensions */,
+				F33ECC9B278DD7F9006247AC /* Protocols */,
+				F33ECC95278DB0BB006247AC /* IGError.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F33ECC97278DD66E006247AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F33ECC98278DD6E0006247AC /* ReportTableViewCell.swift */,
+				F33ECCA2278E01C7006247AC /* LoadingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F33ECC9A278DD6F3006247AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F33ECCA0278DE950006247AC /* PublisherExtensions.swift */,
+				F33ECC9E278DDFA9006247AC /* UIViewControllerExtensions.swift */,
+				F33ECCA6278E02B4006247AC /* UIViewExtensions.swift */,
+				F33ECCAB278E43DA006247AC /* UIColorExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F33ECC9B278DD7F9006247AC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F33ECC9C278DD806006247AC /* CellProtocol.swift */,
+				F33ECCA4278E0217006247AC /* LoadingProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F33ECCA8278E4322006247AC /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				F33ECCA9278E434A006247AC /* ColorPalette.swift */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
 		F3714B50278A05A7008A0248 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +284,7 @@
 		F3714B63278A62D1008A0248 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F33ECC91278D9F74006247AC /* Internal */,
 				F3714B64278A636B008A0248 /* Author.swift */,
 				F3714B66278A641F008A0248 /* Dashboard.swift */,
 				F3714B68278A65FC008A0248 /* DailyBriefings.swift */,
@@ -331,6 +410,8 @@
 				F3714B9E278BBCF2008A0248 /* DataSource */,
 				F3714B63278A62D1008A0248 /* Models */,
 				F3714B73278A756C008A0248 /* Networking */,
+				F33ECC94278DB022006247AC /* Resources */,
+				F33ECC97278DD66E006247AC /* Views */,
 				F3714B50278A05A7008A0248 /* ViewControllers */,
 				F3714B6C278A6C04008A0248 /* ViewModels */,
 				F3F4266627852866002EC461 /* AppDelegate.swift */,
@@ -518,8 +599,13 @@
 				F3714B7E278B3519008A0248 /* NetworkingError.swift in Sources */,
 				F3714B6E278A6C75008A0248 /* ArticlesViewModel.swift in Sources */,
 				F3714B93278BAE84008A0248 /* DashboardEndpoint.swift in Sources */,
+				F33ECCA1278DE950006247AC /* PublisherExtensions.swift in Sources */,
+				F33ECC96278DB0BB006247AC /* IGError.swift in Sources */,
+				F33ECC93278D9FBD006247AC /* ReportSection.swift in Sources */,
 				F3F4266B27852866002EC461 /* ViewController.swift in Sources */,
+				F33ECCA3278E01C8006247AC /* LoadingView.swift in Sources */,
 				F3714B9D278BB443008A0248 /* Markets.swift in Sources */,
+				F33ECCA5278E0217006247AC /* LoadingProtocol.swift in Sources */,
 				F3F4269A27852A7F002EC461 /* AppCoordinator.swift in Sources */,
 				F3714BA0278BBCF3008A0248 /* DashboardDataSource.swift in Sources */,
 				F3714B9B278BB32C008A0248 /* MarketsRequest.swift in Sources */,
@@ -528,21 +614,27 @@
 				F3714B79278A7BEA008A0248 /* HTTPMethod.swift in Sources */,
 				F3714B99278BAFE8008A0248 /* DashboardRequests.swift in Sources */,
 				F3F4266727852866002EC461 /* AppDelegate.swift in Sources */,
+				F33ECC9F278DDFA9006247AC /* UIViewControllerExtensions.swift in Sources */,
 				F3714B95278BAF20008A0248 /* MarketsEndpoint.swift in Sources */,
 				F3714B62278A1E29008A0248 /* ArticleDetailCoordinator.swift in Sources */,
 				F3714B52278A05C1008A0248 /* TabBarController.swift in Sources */,
+				F33ECCA7278E02B4006247AC /* UIViewExtensions.swift in Sources */,
 				F3714B8A278B5DC0008A0248 /* DailyFxAPI.swift in Sources */,
 				F3F4269C27852B06002EC461 /* TabCoordinator.swift in Sources */,
 				F3714B80278B40A0008A0248 /* NetworkDataTask.swift in Sources */,
 				F3714B5E278A17B3008A0248 /* ArticlesCoordinator.swift in Sources */,
 				F3714B6B278A660A008A0248 /* Report.swift in Sources */,
+				F33ECCAA278E434A006247AC /* ColorPalette.swift in Sources */,
 				F3714B70278A6DED008A0248 /* ArticleDetailViewModel.swift in Sources */,
+				F33ECC9D278DD807006247AC /* CellProtocol.swift in Sources */,
 				F3714B5A278A0AE3008A0248 /* MarketsViewController.swift in Sources */,
 				F3F4266927852866002EC461 /* SceneDelegate.swift in Sources */,
 				F3714B65278A636B008A0248 /* Author.swift in Sources */,
 				F3714B56278A091A008A0248 /* DashboardCoordinator.swift in Sources */,
+				F33ECCAC278E43DA006247AC /* UIColorExtensions.swift in Sources */,
 				F3714B60278A1E0B008A0248 /* ArticleDetailViewController.swift in Sources */,
 				F3714B5C278A1774008A0248 /* ArticlesViewController.swift in Sources */,
+				F33ECC99278DD6E1006247AC /* ReportTableViewCell.swift in Sources */,
 				F3714B58278A0935008A0248 /* MarketsCoordinator.swift in Sources */,
 				F3714B8C278B6196008A0248 /* Config.swift in Sources */,
 				F3714B54278A085F008A0248 /* DashboardViewController.swift in Sources */,

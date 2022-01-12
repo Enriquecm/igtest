@@ -8,7 +8,7 @@
 import UIKit
 
 protocol DashboardCoordinatorProtocol: AnyObject {
-    func didSelectButton()
+    func didSelect(report: Report)
 }
 
 class DashboardCoordinator: Coordinator {
@@ -57,9 +57,9 @@ class DashboardCoordinator: Coordinator {
         splitViewController.delegate = masterViewController
     }
 
-    private func coordinateToDetail() {
+    private func coordinateToDetail(with report: Report) {
         let detailNavigationController = UINavigationController()
-        let detailCoordinator = ArticleDetailCoordinator(detailNavigationController)
+        let detailCoordinator = ArticleDetailCoordinator(detailNavigationController, report: report)
         detailCoordinator.start()
 
         let detailRootViewController = detailCoordinator.rootViewController
@@ -72,7 +72,7 @@ class DashboardCoordinator: Coordinator {
 }
 
 extension DashboardCoordinator: DashboardCoordinatorProtocol {
-    func didSelectButton() {
-        coordinateToDetail()
+    func didSelect(report: Report) {
+        coordinateToDetail(with: report)
     }
 }

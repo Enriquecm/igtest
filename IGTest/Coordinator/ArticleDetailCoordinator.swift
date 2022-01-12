@@ -10,7 +10,8 @@ import UIKit
 protocol ArticleDetailCoordinatorProtocol: AnyObject { }
 
 class ArticleDetailCoordinator: Coordinator, ArticleDetailCoordinatorProtocol {
-    private var navigationController: UINavigationController
+    private let navigationController: UINavigationController
+    private let report: Report
 
     var rootViewController: UIViewController {
         return navigationController
@@ -18,8 +19,9 @@ class ArticleDetailCoordinator: Coordinator, ArticleDetailCoordinatorProtocol {
 
     var childCoordinators = [Coordinator]()
 
-    init(_ navigationController: UINavigationController) {
+    init(_ navigationController: UINavigationController, report: Report) {
         self.navigationController = navigationController
+        self.report = report
     }
 
     func start() {
@@ -29,8 +31,9 @@ class ArticleDetailCoordinator: Coordinator, ArticleDetailCoordinatorProtocol {
 
 private extension ArticleDetailCoordinator {
     func navigateToArticleDetail() {
-        let viewModel = ArticleDetailViewModel(coordinator: self)
+        let viewModel = ArticleDetailViewModel(coordinator: self, report: report)
         let viewController = ArticleDetailViewController(viewModel: viewModel)
+        viewController.title = report.title
         navigationController.viewControllers = [viewController]
     }
 }

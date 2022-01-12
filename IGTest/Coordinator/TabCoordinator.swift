@@ -34,11 +34,19 @@ class TabCoordinator: Coordinator, TabCoordinatorProtocol {
         dashboardCoordinator.start()
 
         let dashboardRootViewController = dashboardCoordinator.rootViewController
-        dashboardRootViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 0)
+        dashboardRootViewController.tabBarItem = UITabBarItem(
+            title: "Dashboard",
+            image: UIImage(named: "dashboard-icon"),
+            selectedImage: UIImage(named: "dashboard-icon-filled")
+        )
 
         // Markets
         let marketsNavigationController = UINavigationController()
-        marketsNavigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .history, tag: 1)
+        marketsNavigationController.tabBarItem = UITabBarItem(
+            title: "Markets",
+            image: UIImage(named: "markets-icon"),
+            selectedImage: UIImage(named: "markets-icon-filled")
+        )
 
         let marketsCoordinator = MarketsCoordinator(marketsNavigationController, api: api)
         marketsCoordinator.start()
