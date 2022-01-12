@@ -35,5 +35,6 @@ private extension ArticleDetailCoordinator {
         let viewController = ArticleDetailViewController(viewModel: viewModel)
         viewController.title = report.title
         navigationController.viewControllers = [viewController]
+        navigationController.extendedLayoutIncludesOpaqueBars = true
     }
 }

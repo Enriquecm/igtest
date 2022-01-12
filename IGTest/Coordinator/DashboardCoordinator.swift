@@ -65,7 +65,6 @@ class DashboardCoordinator: Coordinator {
         let detailRootViewController = detailCoordinator.rootViewController
         detailRootViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
         detailRootViewController.navigationItem.leftItemsSupplementBackButton = true
-
         splitViewController.showDetailViewController(detailRootViewController, sender: nil)
         childCoordinators.append(detailCoordinator)
     }

@@ -1,65 +1,71 @@
 //
-//  ReportTableViewCell.swift
+//  ArticleDetailView.swift
 //  IGTest
 //
-//  Created by Enrique Melgarejo on 11/01/22.
+//  Created by Enrique Melgarejo on 12/01/22.
 //
 
 import UIKit
 
-class ReportTableViewCell: UITableViewCell, CellProtocol {
-    
+class ArticleDetailView: UIView {
+
     private enum Constants {
         static let insetPadding = UIEdgeInsets(top: 8.0, left: 16.0, bottom: 18.0, right: 16.0)
         static let textSpacing = 10.0
         static let titleFontSize = 14.0
         static let descriptionFontSize = 12.0
     }
-
-    // MARK: - UI Elements
-
+    
     private let stackView = UIStackView()
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
+    private let authorsLabel = UILabel()
+    private let tagsLabel = UILabel()
 
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    // MARK: - Life cycle
+
+    init() {
+        super.init(frame: .zero)
         commonInit()
     }
 
-    @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        titleLabel.text = nil
-        descriptionLabel.text = nil
     }
 
     func setup(with report: Report) {
         titleLabel.text = report.title
         descriptionLabel.text = report.description
+
+        let authors = report.authors?
+            .compactMap { $0.name }
+            .joined(separator: ",")
+        authorsLabel.text = "Authors: " + (authors ?? "-")
+
+        let tags = report.tags?.joined(separator: ",")
+        tagsLabel.text = "Tags: " + (tags ?? "-")
     }
 
-    // MARK: - Private methods
+    // MARK: - Private Methods
+
     private func commonInit() {
         setupUI()
         setupStackView()
         setupTitleLabel()
         setupDescriptionLabel()
+        setupTagsLabel()
     }
 
     private func setupUI() {
-        contentView.backgroundColor = .clear
-        contentView.addSubview(stackView)
-        stackView.constraintToMatch(view: self.contentView, inset: Constants.insetPadding)
+        addSubview(stackView)
+        stackView.constraintToMatch(view: self)
     }
 
     private func setupStackView() {
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(descriptionLabel)
+        stackView.addArrangedSubview(authorsLabel)
+        stackView.addArrangedSubview(tagsLabel)
 
         stackView.distribution = .fill
         stackView.axis = .vertical
@@ -83,5 +89,17 @@ class ReportTableViewCell: UITableViewCell, CellProtocol {
         descriptionLabel.lineBreakMode = .byWordWrapping
         descriptionLabel.setContentCompressionResistancePriority(UILayoutPriority(800), for: .vertical)
         descriptionLabel.setContentHuggingPriority(UILayoutPriority(999), for: .vertical)
+    }
+
+    private func setupAuthorsLabel() {
+        authorsLabel.textColor = ColorPalette.text
+        authorsLabel.font = UIFont.systemFont(ofSize: Constants.descriptionFontSize)
+        authorsLabel.numberOfLines = 1
+    }
+
+    private func setupTagsLabel() {
+        tagsLabel.textColor = ColorPalette.text
+        tagsLabel.font = UIFont.systemFont(ofSize: Constants.descriptionFontSize)
+        tagsLabel.numberOfLines = 1
     }
 }

@@ -17,11 +17,12 @@ extension UIViewController {
     func showSimpleAlert(
         _ title: String?,
         message: String?,
+        style: UIAlertController.Style = .alert,
         alertTitle: String = "Ok",
-        style: UIAlertController.Style = .alert
+        alertHandler: ((UIAlertAction) -> Void)? = nil
     ) {
         let refreshAlert = UIAlertController(title: title, message: message, preferredStyle: style)
-        refreshAlert.addAction(UIAlertAction(title: alertTitle, style: .cancel, handler: nil))
+        refreshAlert.addAction(UIAlertAction(title: alertTitle, style: .cancel, handler: alertHandler))
         present(refreshAlert, animated: true, completion: nil)
     }
 }

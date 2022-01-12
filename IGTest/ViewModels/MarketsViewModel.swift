@@ -19,19 +19,38 @@ class MarketsViewModel {
         self.dataSource = dataSource
     }
 
-    func fetchDashboard() {
-        dataSource.requestMarkets()
-            .receive(on: RunLoop.main)
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .failure(let error):
-                    break
-                case .finished:
-                    break
-                }
-            }, receiveValue: { dashboard in
+    func fetchMarkets() -> AnyPublisher<[MarketSection], BusinessError> {
+        return dataSource.requestMarkets()
+            .mapError { BusinessError.map($0) }
+            .tryCompactMap { try self.process(markets: $0) }
+            .mapError { BusinessError.map($0) }
+            .eraseToAnyPublisher()
+    }
+}
 
-            })
-            .store(in: &cancellables)
+extension MarketsViewModel {
+    private func process(markets: Markets) throws -> [MarketSection] {
+        var sections = [MarketSection]()
+
+        // Currencies
+        if let currencies = markets.currencies {
+            sections.append(MarketSection(title: "Currencies", markets: currencies))
+        }
+
+        // Commodities
+        if let commodities = markets.commodities {
+            sections.append(MarketSection(title: "Commodities", markets: commodities))
+        }
+
+        // Indices
+        if let indices = markets.indices {
+            sections.append(MarketSection(title: "indices", markets: indices))
+        }
+
+        if sections.isEmpty {
+            throw BusinessError.marketsNotFound
+        } else {
+            return sections
+        }
     }
 }

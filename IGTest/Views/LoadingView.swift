@@ -9,7 +9,7 @@ import UIKit
 
 class LoadingView: UIView {
     private let viewBackground = UIView()
-    private let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+    private let activityIndicator = UIActivityIndicatorView(style: .large)
 
     init() {
         super.init(frame: .zero)

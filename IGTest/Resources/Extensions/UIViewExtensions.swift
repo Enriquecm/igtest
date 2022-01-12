@@ -80,7 +80,7 @@ extension UIView {
             self.topAnchor.constraint(equalTo: view.topAnchor, constant: inset.top),
             self.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: inset.left),
             view.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: inset.right),
-            view.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: inset.bottom)
+            view.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: inset.bottom)
         ])
     }
 

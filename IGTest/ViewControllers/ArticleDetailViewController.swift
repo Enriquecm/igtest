@@ -11,8 +11,13 @@ class ArticleDetailViewController: UIViewController {
 
     private let viewModel: ArticleDetailViewModel
 
-    init(viewModel: ArticleDetailViewModel) {
+    // MARK: - UI Elements
 
+    private let articleDetailView = ArticleDetailView()
+
+    // MARK: - Life Cycle
+
+    init(viewModel: ArticleDetailViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -24,6 +29,29 @@ class ArticleDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        addLabel(title: "ArticleDetailViewController")
+        setupUI()
+        setupArticleDetailView()
+    }
+
+    // MARK: - Private methods
+
+    private func setupUI() {
+        edgesForExtendedLayout = [.bottom]
+        extendedLayoutIncludesOpaqueBars = true
+        view.backgroundColor = ColorPalette.background
+
+        articleDetailView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(articleDetailView)
+
+        NSLayoutConstraint.activate([
+            articleDetailView.topAnchor.constraint(equalTo: view.topAnchor, constant: 16.0),
+            articleDetailView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16.0),
+            view.trailingAnchor.constraint(equalTo: articleDetailView.trailingAnchor, constant: 16.0),
+            view.bottomAnchor.constraint(greaterThanOrEqualTo: articleDetailView.bottomAnchor, constant: 16.0)
+        ])
+    }
+
+    private func setupArticleDetailView() {
+        articleDetailView.setup(with: viewModel.report)
     }
 }

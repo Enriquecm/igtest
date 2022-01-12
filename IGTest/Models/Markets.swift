@@ -8,4 +8,7 @@
 import Foundation
 
 struct Markets: Codable, Equatable {
+    let currencies: [Market]?
+    let commodities: [Market]?
+    let indices: [Market]?
 }

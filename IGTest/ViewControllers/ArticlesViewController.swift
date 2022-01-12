@@ -50,6 +50,7 @@ class ArticlesViewController: UIViewController {
 
         setupBindings()
         setupUI()
+        loadContent()
     }
 
     // MARK: - Private methods
@@ -58,22 +59,6 @@ class ArticlesViewController: UIViewController {
         isLoadingSubject
             .assign(to: \.showLoading, on: self)
             .store(in: &cancellables)
-
-        viewModel.fetchDashboard()
-            .receive(on: RunLoop.main)
-            .observeFetchStatus(with: isLoadingSubject)
-            .sink { [weak self] completion in
-                switch completion {
-                case .failure(let error):
-                    self?.showSimpleAlert("Alert", message: error.message)
-                case .finished:
-                    break
-                }
-            } receiveValue: { [weak self] reportSections in
-                self?.dataSource = reportSections
-            }
-            .store(in: &cancellables)
-
     }
 
     private func setupUI() {
@@ -90,10 +75,31 @@ class ArticlesViewController: UIViewController {
         tableView.backgroundColor = .clear
         tableView.tableHeaderView = UIView()
         tableView.tableFooterView = UIView()
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.dataSource = self
         tableView.delegate = self
 
         tableView.register(ReportTableViewCell.self, forCellReuseIdentifier: ReportTableViewCell.identifier)
+    }
+
+    private func loadContent() {
+        viewModel.fetchDashboard()
+            .receive(on: RunLoop.main)
+            .observeFetchStatus(with: isLoadingSubject)
+            .sink { [weak self] completion in
+                switch completion {
+                case .failure(let error):
+                    self?.showSimpleAlert("Alert", message: error.message) { _ in
+                        self?.loadContent()
+                    }
+                case .finished:
+                    break
+                }
+            } receiveValue: { [weak self] reportSections in
+                self?.dataSource = reportSections
+            }
+            .store(in: &cancellables)
     }
 }
 
@@ -124,6 +130,10 @@ extension ArticlesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let report = dataSource[indexPath.section].reports[indexPath.row]
         viewModel.didSelect(report: report)
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
 }
 

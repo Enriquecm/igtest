@@ -39,8 +39,6 @@ private extension ArticlesCoordinator {
         let viewController = ArticlesViewController(viewModel: viewModel)
         viewController.title = "Dashboard"
         navigationController.viewControllers = [viewController]
-        navigationController.navigationBar.isTranslucent = false
-        navigationController.navigationBar.backgroundColor = ColorPalette.background
     }
 }
 
